@@ -1,0 +1,66 @@
+<div class="container">
+  <!-- Login form -->
+  <link rel="stylesheet" href="login.css" />
+  <div class="hero">
+    <div class="form-box">
+      <div class="button-box">
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="register()">
+            Register
+          </button>
+
+
+          <form id = 
+            #loginForm="ngForm"
+            (ngSubmit)="onLogin(loginForm)"
+            id="loginForm"
+          >
+            <input
+              type="text"
+              name="emailOrUserId"
+              placeholder="Email or User ID"
+              ngModel
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              ngModel
+            />
+            <button type="submit">Log In</button>
+          </form>
+
+          <!-- Sign up form -->
+          <form
+            #signupForm="ngForm"
+            (ngSubmit)="onSubmit(signupForm)"
+            id="signupForm"
+          >
+            <input type="text" name="email" placeholder="Email" ngModel />
+            <input type="text" name="userId" placeholder="User ID" ngModel />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              ngModel
+            />
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm Password"
+              ngModel
+            />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Links -->
+<a routerLink="">Home</a>
+<a routerLink="/chat">Chat</a>
+<a routerLink="/auth">auth</a>
